@@ -24,19 +24,15 @@ npm run dev
 
 Статическая сборка (как на GitHub Pages): `npm run build`, затем `npm start`. Файлы появляются в каталоге `out/`.
 
-## Публичный адрес на GitHub Pages
+## Публичный адрес
 
-После того как репозиторий окажется на GitHub:
+Сайт на GitHub Pages:
 
-1. В настройках репозитория откройте **Settings → Pages**.
-2. Source: **GitHub Actions**.
-3. Каждый push в `main` собирает сайт и публикует его.
+- репозиторий: [github.com/TimaxLacs/cppk-ekaterinburg](https://github.com/TimaxLacs/cppk-ekaterinburg)
+- главная: [timaxlacs.github.io/cppk-ekaterinburg](https://timaxlacs.github.io/cppk-ekaterinburg/)
+- рынок: [timaxlacs.github.io/cppk-ekaterinburg/rynok](https://timaxlacs.github.io/cppk-ekaterinburg/rynok/)
+- площадки: [timaxlacs.github.io/cppk-ekaterinburg/ploschadki](https://timaxlacs.github.io/cppk-ekaterinburg/ploschadki/)
 
-Адрес будет таким:
-
-- `https://<логин>.github.io/<имя-репозитория>/` — обычный репозиторий
-- `https://<логин>.github.io/` — если репозиторий называется `<логин>.github.io`
-
-Workflow сам подставляет `basePath`, поэтому ссылки и шрифты не ломаются в подпапке.
+Личный сайт [timaxlacs.github.io](https://timaxlacs.github.io/) не менялся. Обновление публичной версии: `git push github main`, затем workflow `github-pages`.
 
 По глубине и оформлению документ опирается на материалы [ЦППК и «Стрелка»](https://timaxlacs.github.io/cppk-strelka/strelka/).
