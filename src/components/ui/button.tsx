@@ -3,10 +3,8 @@ import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 const styles = {
-  primary:
-    "bg-gold text-navy hover:bg-gold-soft shadow-[0_0_0_1px_rgba(212,160,23,0.3)]",
-  ghost:
-    "bg-transparent text-cream/90 border border-cream/15 hover:border-gold/50 hover:text-gold",
+  primary: "bg-good text-white hover:bg-gold-soft",
+  ghost: "bg-white text-ink border border-line hover:border-good hover:text-good",
 };
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {

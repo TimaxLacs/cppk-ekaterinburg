@@ -1,46 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #071422;
-  --navy-2: #0c2340;
-  --navy-3: #123056;
-  --gold: #d4a017;
-  --gold-soft: #e8c45a;
-  --cream: #f4ede0;
-  --paper: #faf7f2;
-  --granite: #8b8680;
-  --teal: #2a5a6b;
-  --teal-soft: #7eb6c4;
-  --ink: #1a1714;
+  --ink: #1c1c1c;
+  --muted: #5a5a5a;
+  --paper: #f7f8fa;
+  --card: #ffffff;
+  --line: #e4e6ea;
+  --good: #1f7a5c;
+  --good-bg: #e5f4ee;
+  --bad: #c44b4b;
+  --bad-bg: #fdeeee;
+  --warn: #b07a2a;
+  --warn-bg: #fff4df;
+  --gold: #1f7a5c;
+  --gold-soft: #2a9470;
+  --navy: #f7f8fa;
+  --navy-2: #ffffff;
+  --navy-3: #eef3f1;
+  --cream: #1c1c1c;
+  --teal: #2c6b8a;
 }
 
 @theme inline {
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-good: var(--good);
+  --color-good-bg: var(--good-bg);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --color-navy: var(--navy);
   --color-navy-2: var(--navy-2);
   --color-navy-3: var(--navy-3);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
   --color-cream: var(--cream);
-  --color-paper: var(--paper);
-  --color-granite: var(--granite);
   --color-teal: var(--teal);
-  --color-teal-soft: var(--teal-soft);
-  --color-ink: var(--ink);
   --font-sans: var(--font-manrope), "Manrope", sans-serif;
   --font-serif: var(--font-cormorant), "Cormorant Garamond", serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--navy);
-  color: var(--cream);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-sans), "Manrope", sans-serif;
-  background-image:
-    radial-gradient(1200px 600px at 80% -10%, rgba(212, 160, 23, 0.08), transparent 50%),
-    radial-gradient(900px 500px at -10% 20%, rgba(42, 90, 107, 0.18), transparent 45%);
   min-height: 100vh;
 }
 
@@ -49,6 +58,6 @@ body {
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--good-bg);
+  color: var(--ink);
 }

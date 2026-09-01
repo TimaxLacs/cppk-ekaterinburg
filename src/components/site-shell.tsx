@@ -12,18 +12,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="min-h-screen">
-      <header className="sticky top-0 z-40 border-b border-white/8 bg-navy/85 backdrop-blur-xl">
+    <div className="min-h-screen bg-paper text-ink">
+      <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-gold text-sm font-semibold text-navy">
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-good text-sm font-semibold text-white">
               Ц
             </span>
             <span className="leading-tight">
-              <span className="block text-[11px] uppercase tracking-[0.18em] text-gold">
+              <span className="block text-[11px] uppercase tracking-[0.18em] text-muted">
                 Екатеринбург
               </span>
-              <span className="block font-medium text-cream">ЦППК · обзор</span>
+              <span className="block font-medium">ЦППК · обзор</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-1 sm:flex">
@@ -36,18 +36,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   className={cn(
                     "rounded-full px-3 py-1.5 text-xs tracking-wide transition-colors",
                     active
-                      ? "bg-gold text-navy"
-                      : "text-cream/70 hover:bg-white/6 hover:text-cream",
+                      ? "bg-good text-white"
+                      : "text-muted hover:bg-white hover:text-ink",
                   )}
                 >
-                  {chapter.num} {chapter.title}
+                  {chapter.title}
                 </Link>
               );
             })}
           </nav>
           <button
             type="button"
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-cream sm:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-line sm:hidden"
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
           >
@@ -55,7 +55,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </button>
         </div>
         {open ? (
-          <div className="border-t border-white/8 px-4 py-3 sm:hidden">
+          <div className="border-t border-line px-4 py-3 sm:hidden">
             <div className="grid gap-1">
               {chapters.map((chapter) => (
                 <Link
@@ -64,12 +64,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   onClick={() => setOpen(false)}
                   className={cn(
                     "rounded-xl px-3 py-2 text-sm",
-                    pathname.startsWith(chapter.href)
-                      ? "bg-gold text-navy"
-                      : "text-cream/80",
+                    pathname.startsWith(chapter.href) ? "bg-good text-white" : "text-ink",
                   )}
                 >
-                  {chapter.num}. {chapter.title}
+                  {chapter.title}
                 </Link>
               ))}
             </div>
@@ -77,11 +75,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         ) : null}
       </header>
       {children}
-      <footer className="border-t border-white/8">
-        <div className="mx-auto max-w-7xl px-4 py-8 text-sm leading-6 text-cream/45 sm:px-6">
-          Рабочие материалы к разговору о филиале Межрегионального ЦППК в
-          Екатеринбурге. Опора на открытые данные cppkspb.ru, 2ГИС и городские
-          обзоры 2025–2026. Это предложение, не официальная позиция учреждения.
+      <footer className="border-t border-line">
+        <div className="mx-auto max-w-7xl px-4 py-8 text-sm leading-6 text-muted sm:px-6">
+          Рабочий документ. Срез открытых данных cppkspb.ru, Яндекс и 2ГИС, 27.08.2026.
+          Не электрички АО «ЦППК».
         </div>
       </footer>
     </div>
