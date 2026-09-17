@@ -2,10 +2,10 @@
 
 import { chapters } from "@/data/nav";
 import { cn } from "@/lib/cn";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -28,7 +28,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </Link>
           <nav className="hidden items-center gap-1 sm:flex">
             {chapters.map((chapter) => {
-              const active = pathname === chapter.href || pathname === `${chapter.href}/`;
+              const active =
+                pathname === chapter.href || pathname === `${chapter.href}/`;
               return (
                 <Link
                   key={chapter.href}
@@ -64,7 +65,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                   onClick={() => setOpen(false)}
                   className={cn(
                     "rounded-xl px-3 py-2 text-sm",
-                    pathname.startsWith(chapter.href) ? "bg-good text-white" : "text-ink",
+                    pathname.startsWith(chapter.href)
+                      ? "bg-good text-white"
+                      : "text-ink",
                   )}
                 >
                   {chapter.title}
@@ -77,8 +80,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       {children}
       <footer className="border-t border-line">
         <div className="mx-auto max-w-7xl px-4 py-8 text-sm leading-6 text-muted sm:px-6">
-          Рабочий документ. Срез открытых данных cppkspb.ru, Яндекс и 2ГИС, 27.08.2026.
-          Не электрички АО «ЦППК».
+          Рабочий документ. Сверка cppkspb.ru, Яндекс и 2ГИС, 17.09.2026. Не
+          электрички АО «ЦППК».
         </div>
       </footer>
     </div>

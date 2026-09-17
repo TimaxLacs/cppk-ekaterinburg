@@ -17,7 +17,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "ЦППК Екатеринбург: куда вкладывать",
   description:
-    "Обзор рынка филиала Межрегионального ЦППК в Екатеринбурге и примеры текстов для поиска, сайта, карт, Авито и Директа.",
+    "Обзор рынка филиала Межрегионального ЦППК в Екатеринбурге и тексты для поиска, сайта, карт, Авито, Директа, ВК, Telegram и MAX.",
 };
 
 export default function RootLayout({
