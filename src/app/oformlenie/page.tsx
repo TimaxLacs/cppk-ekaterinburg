@@ -2,7 +2,6 @@ import { BrandFrame } from "@/components/brand-frame";
 import { PageHero, Section, SectionTitle } from "@/components/page-hero";
 import { coverVariants, lockupVariants, photoKit, signetVariants } from "@/data/brand";
 import { shootRules } from "@/data/oformlenie";
-import { publicAsset } from "@/lib/asset";
 
 export default function BrandPage() {
   return (
@@ -30,6 +29,7 @@ export default function BrandPage() {
               key={item.file}
               src={item.file}
               alt={item.title}
+              ratio="square"
               caption={`${item.title}. ${item.use}.`}
             />
           ))}
@@ -44,6 +44,7 @@ export default function BrandPage() {
               key={item.file}
               src={item.file}
               alt={item.title}
+              ratio="square"
               caption={`${item.title}. ${item.use}.`}
             />
           ))}
@@ -72,14 +73,19 @@ export default function BrandPage() {
         />
         <div className="grid gap-3 md:grid-cols-2">
           {photoKit.map((item) => (
-            <article key={item.file} className="overflow-hidden rounded-3xl border border-line bg-white">
-              <img src={publicAsset(item.file)} alt="" className="h-40 w-full object-cover" />
-              <div className="p-4">
-                <p className="text-[11px] uppercase tracking-wide text-good">{item.use}</p>
-                <p className="mt-2 text-sm leading-6">{item.caption}</p>
-                <p className="mt-2 text-xs text-muted">{item.size}</p>
-              </div>
-            </article>
+            <BrandFrame
+              key={item.file}
+              src={item.file}
+              alt={item.use}
+              ratio={
+                item.size.includes("800") ||
+                item.file.includes("signet") ||
+                item.file.includes("avatar")
+                  ? "square"
+                  : "auto"
+              }
+              caption={`${item.caption}`}
+            />
           ))}
         </div>
       </Section>

@@ -44,6 +44,7 @@ export default function MapsChannelPage() {
           <BrandFrame
             src="/brand/logo/variants/signet-navy-gold.png"
             alt="Знак для карточек карт"
+            ratio="square"
             caption="Знак на карточки Яндекса, 2ГИС и Google. Один и тот же файл."
           />
           <article className="rounded-3xl border border-line bg-white p-6">

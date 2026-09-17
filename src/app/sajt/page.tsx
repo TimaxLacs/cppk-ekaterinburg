@@ -21,6 +21,7 @@ export default function SiteChannelPage() {
           <BrandFrame
             src="/brand/logo/variants/logo-ekb-cream.png"
             alt="Плашка филиала для сайта"
+            ratio="square"
             caption="Светлая плашка для первого экрана страницы филиала."
           />
           <article className="rounded-3xl border border-line bg-white p-6">

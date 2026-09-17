@@ -1,34 +1,66 @@
-import { publicAsset } from "@/lib/asset";
+import { OpenableImage } from "@/components/openable-image";
+
+const ratioClass = {
+  auto: "",
+  square: "aspect-square",
+  banner: "",
+  photo: "",
+};
 
 export function BrandFrame({
   src,
   alt,
   caption,
   className = "",
+  ratio = "auto",
 }: {
   src: string;
   alt: string;
   caption?: string;
   className?: string;
+  ratio?: keyof typeof ratioClass;
 }) {
+  const isTile = ratio === "square";
+
   return (
-    <figure className={`overflow-hidden rounded-3xl border border-line bg-white ${className}`}>
-      <img src={publicAsset(src)} alt={alt} className="h-full w-full object-cover" />
-      {caption ? (
-        <figcaption className="border-t border-line px-4 py-3 text-sm text-muted">
-          {caption}
-        </figcaption>
-      ) : null}
+    <figure
+      className={`overflow-hidden rounded-3xl border border-line bg-white ${className}`}
+    >
+      {isTile ? (
+        <div className="relative aspect-square bg-[#eef0f3]">
+          <div className="absolute inset-0 p-4">
+            <OpenableImage
+              src={src}
+              alt={alt}
+              fill
+              className="h-full w-full"
+            />
+          </div>
+        </div>
+      ) : (
+        <div className={`bg-[#eef0f3] ${ratioClass[ratio]}`}>
+          <OpenableImage src={src} alt={alt} className="h-auto w-full" />
+        </div>
+      )}
+      <figcaption className="border-t border-line px-4 py-3 text-sm text-muted">
+        {caption ? `${caption} ` : null}
+        Нажмите, чтобы открыть целиком.
+      </figcaption>
     </figure>
   );
 }
 
-export function AvatarMark({ src, alt }: { src: string; alt: string }) {
+export function ChannelCover({ src, alt }: { src: string; alt: string }) {
   return (
-    <img
-      src={publicAsset(src)}
-      alt={alt}
-      className="h-16 w-16 rounded-full border border-line object-cover"
-    />
+    <div className="relative aspect-[2/1] bg-[#eef0f3]">
+      <div className="absolute inset-0 p-3">
+        <OpenableImage
+          src={src}
+          alt={alt}
+          fill
+          className="h-full w-full"
+        />
+      </div>
+    </div>
   );
 }

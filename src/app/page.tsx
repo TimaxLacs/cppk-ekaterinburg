@@ -1,8 +1,9 @@
+import { ChannelCard } from "@/components/channel-card";
+import { OpenableImage } from "@/components/openable-image";
 import { Button } from "@/components/ui/button";
 import { autodrome, hours, office, phones } from "@/data/contacts";
 import { channels } from "@/data/channels";
 import { chapters } from "@/data/nav";
-import { publicAsset } from "@/lib/asset";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -44,11 +45,15 @@ export default function HomePage() {
       <section className="mx-auto grid max-w-7xl gap-3 px-4 pb-8 sm:px-6 md:grid-cols-2">
         <article className="rounded-3xl border border-line bg-white p-6">
           <div className="flex items-center gap-3">
-            <img
-              src={publicAsset("/brand/logo/variants/signet-navy-gold.png")}
-              alt=""
-              className="h-12 w-12 rounded-full object-cover"
-            />
+            <div className="h-12 w-12 overflow-hidden rounded-full border border-line">
+              <OpenableImage
+                src="/brand/logo/variants/signet-navy-gold.png"
+                alt="Знак ЦППК"
+                fill
+                hint={false}
+                className="h-12 w-12"
+              />
+            </div>
             <div>
               <p className="text-[11px] font-bold uppercase tracking-wide text-good">
                 кабинет
@@ -66,11 +71,15 @@ export default function HomePage() {
         </article>
         <article className="rounded-3xl border border-line bg-white p-6">
           <div className="flex items-center gap-3">
-            <img
-              src={publicAsset("/brand/logo/variants/signet-navy-gold.png")}
-              alt=""
-              className="h-12 w-12 rounded-full object-cover"
-            />
+            <div className="h-12 w-12 overflow-hidden rounded-full border border-line">
+              <OpenableImage
+                src="/brand/logo/variants/signet-navy-gold.png"
+                alt="Знак ЦППК"
+                fill
+                hint={false}
+                className="h-12 w-12"
+              />
+            </div>
             <div>
               <p className="text-[11px] font-bold uppercase tracking-wide text-good">
                 автодром
@@ -107,24 +116,7 @@ export default function HomePage() {
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {channels.map((channel) => (
-            <Link
-              key={channel.slug}
-              href={channel.href}
-              className="overflow-hidden rounded-3xl border border-line bg-white hover:border-good"
-            >
-              <img
-                src={publicAsset(channel.cover)}
-                alt=""
-                className="h-24 w-full object-cover"
-              />
-              <div className="p-4">
-                <p className="text-[11px] uppercase tracking-wide text-good">
-                  {channel.num}
-                </p>
-                <h3 className="font-serif mt-1 text-2xl">{channel.title}</h3>
-                <p className="mt-1 text-sm text-muted">{channel.short}</p>
-              </div>
-            </Link>
+            <ChannelCard key={channel.slug} channel={channel} compact />
           ))}
         </div>
         <p className="mt-6 text-sm text-muted">

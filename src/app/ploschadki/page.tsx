@@ -1,9 +1,8 @@
+import { ChannelCard } from "@/components/channel-card";
 import { ChannelSubnav } from "@/components/channel-subnav";
 import { PageHero, Section, SectionTitle } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { channels, chain, doNot, orderFix } from "@/data/channels";
-import { publicAsset } from "@/lib/asset";
-import Link from "next/link";
 
 export default function PlatformsPage() {
   return (
@@ -45,25 +44,7 @@ export default function PlatformsPage() {
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {channels.map((channel) => (
-            <Link
-              key={channel.slug}
-              href={channel.href}
-              className="overflow-hidden rounded-3xl border border-line bg-white hover:border-good"
-            >
-              <img
-                src={publicAsset(channel.cover)}
-                alt=""
-                className="h-32 w-full object-cover"
-              />
-              <div className="p-5">
-                <p className="text-[11px] uppercase tracking-wide text-good">
-                  {channel.num} · {channel.isCommunity ? "сообщество" : "канал"}
-                </p>
-                <h3 className="font-serif mt-1 text-2xl">{channel.title}</h3>
-                <p className="mt-2 text-sm text-muted">{channel.short}</p>
-                <p className="mt-2 text-sm leading-6">{channel.role}</p>
-              </div>
-            </Link>
+            <ChannelCard key={channel.slug} channel={channel} />
           ))}
         </div>
       </Section>

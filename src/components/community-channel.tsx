@@ -6,7 +6,7 @@ import { PostExamples } from "@/components/post-examples";
 import { Badge } from "@/components/ui/badge";
 import { playbooks, type Channel } from "@/data/channels";
 import { posts } from "@/data/posts";
-import { publicAsset } from "@/lib/asset";
+import { OpenableImage } from "@/components/openable-image";
 
 const playbookKey = {
   vk: "vk",
@@ -37,11 +37,15 @@ export function CommunityChannelPage({ channel }: { channel: Channel }) {
           />
           <article className="rounded-3xl border border-line bg-white p-6">
             <div className="flex items-center gap-4">
-              <img
-                src={publicAsset(channel.avatar)}
-                alt=""
-                className="h-16 w-16 rounded-full border border-line object-cover"
-              />
+              <div className="h-16 w-16 overflow-hidden rounded-full border border-line">
+                <OpenableImage
+                  src={channel.avatar}
+                  alt="Аватар сообщества ЦППК Екатеринбург"
+                  fill
+                  hint={false}
+                  className="h-16 w-16"
+                />
+              </div>
               <div>
                 <p className="text-[11px] uppercase tracking-[0.16em] text-good">
                   сообщество
