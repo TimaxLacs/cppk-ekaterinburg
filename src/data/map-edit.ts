@@ -52,7 +52,7 @@ export const mapEditGuides = [
       },
       {
         field: "Адрес",
-        cabinet: "г. Екатеринбург, ул. 8 Марта, д. 158, офис 207, 2 этаж"
+        cabinet: "г. Екатеринбург, ул. 8 Марта, д. 158, офис 207, 2 этаж",
         autodrome: "г. Верхняя Пышма, ул. Петрова, д. 59а",
       },
       {
@@ -203,7 +203,7 @@ export const mapEditGuides = [
       },
       {
         field: "Address",
-        cabinet: "ul. 8 Marta, 158, office 207, Yekaterinburg"
+        cabinet: "ul. 8 Marta, 158, office 207, Yekaterinburg",
         autodrome: "ul. Petrova, 59a, Verkhnyaya Pyshma",
       },
       {
