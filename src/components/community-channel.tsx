@@ -157,7 +157,7 @@ export function CommunityChannelPage({ channel }: { channel: Channel }) {
           <CopyField label="UTM на сайт" value={book.utm} />
         </div>
         <p className="mt-4 rounded-2xl bg-bad-bg p-4 text-sm">
-          Номера 922 и 328 в ответах не давать. Категорию B не набирать. Часы
+          Номер 922 в ответах не давать. Кабинет: 257-57-92, площадка: 328-29-30. Категорию B не набирать. Часы
           автодрома не публиковать.
         </p>
         <Badge tone="muted">сверка 17.09.2026</Badge>

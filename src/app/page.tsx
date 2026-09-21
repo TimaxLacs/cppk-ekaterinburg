@@ -17,9 +17,8 @@ export default function HomePage() {
           Куда вкладывать продвижение
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-          Не электрички и не обычная автошкола. Офис: 8 Марта, 158. Автодром:
-          Пышма, Петрова, 59А. Сначала страница в поиске и один телефон 343,
-          потом реклама.
+          Не электрички и не обычная автошкола. Кабинет: 8 Марта, 158, телефон
+          257-57-92. Автодром передали отдельно: Пышма, Петрова, 59а, 328-29-30.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="/rynok">Рынок</Button>
@@ -36,7 +35,7 @@ export default function HomePage() {
           <p className="mt-2 text-sm text-muted">«Учебный комбинат Допог» · 188-29-30</p>
         </div>
         <div className="rounded-2xl bg-good-bg p-5 text-center">
-          <p className="text-sm font-bold text-muted">нужен один</p>
+          <p className="text-sm font-bold text-muted">кабинет на сайте</p>
           <p className="font-serif text-5xl text-good">343</p>
           <p className="mt-2 text-sm text-muted">{phones.official}</p>
         </div>
@@ -88,8 +87,8 @@ export default function HomePage() {
             </div>
           </div>
           <p className="mt-3 text-sm leading-6 text-muted">{autodrome.mapsLine}</p>
-          <p className="mt-3 text-lg font-medium">{phones.official}</p>
-          <p className="mt-1 text-sm text-muted">Часы площадки не публикуем.</p>
+          <p className="mt-3 text-lg font-medium">{phones.autodrome}</p>
+          <p className="mt-1 text-sm text-muted">Часы площадки не передавали.</p>
           <p className="mt-3 text-sm">{autodrome.note}</p>
         </article>
       </section>

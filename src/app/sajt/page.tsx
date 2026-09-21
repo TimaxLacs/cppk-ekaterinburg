@@ -40,7 +40,7 @@ export default function SiteChannelPage() {
         <SectionTitle
           eyebrow="блоки"
           title="Что должно быть на странице филиала"
-          body="Город в первом экране, два адреса, один телефон, цены из PDF, дата группы после учебной части."
+          body="Город в первом экране, два адреса, телефон кабинета и отдельно телефон площадки, цены из PDF, дата группы после учебной части."
         />
         <div className="grid gap-4 lg:grid-cols-3">
           {siteBlocks.map((block) => (

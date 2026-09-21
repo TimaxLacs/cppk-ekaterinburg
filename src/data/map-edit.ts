@@ -1,7 +1,7 @@
 export const mapEditDocs = [
   "Яндекс-аккаунт сотрудника, который будет владельцем. Не личный аккаунт подрядчика без передачи прав.",
   "Почта филиала ekb@cppkspb.ru. Её же указать в карточке.",
-  "Телефон, который публикуем: только +7 (343) 257-57-92. Для кабинета и для автодрома один номер.",
+  "Два телефона. Кабинет: +7 (343) 257-57-92. Автодром: +7 (343) 328-29-30, передали отдельно.",
   "ИНН и ОГРН головного учреждения. Взять у бухгалтерии или с карточки на cppkspb.ru. Сюда цифры не выдумывать.",
   "Скан устава, свидетельства или договора аренды офиса 207, если попросят документы.",
   "Фото фасада 8 Марта и въезда Петрова, 59а.",
@@ -63,7 +63,7 @@ export const mapEditGuides = [
       {
         field: "Телефон",
         cabinet: "+7 (343) 257-57-92",
-        autodrome: "+7 (343) 257-57-92",
+        autodrome: "+7 (343) 328-29-30",
       },
       {
         field: "Почта",
@@ -141,7 +141,7 @@ export const mapEditGuides = [
       {
         field: "Телефон",
         cabinet: "+7 (343) 257-57-92",
-        autodrome: "+7 (343) 257-57-92",
+        autodrome: "+7 (343) 328-29-30",
       },
       {
         field: "Почта и сайт",
@@ -209,7 +209,7 @@ export const mapEditGuides = [
       {
         field: "Phone",
         cabinet: "+7 343 257-57-92",
-        autodrome: "+7 343 257-57-92",
+        autodrome: "+7 343 328-29-30",
       },
       {
         field: "Website",
@@ -224,7 +224,7 @@ export const mapEditGuides = [
       {
         field: "Description",
         cabinet:
-          "Branch classroom and office. Practice track: Verkhnyaya Pyshma, Petrova 59a. Phone +7 343 257-57-92.",
+          "Branch classroom and office, +7 343 257-57-92. Practice track: Verkhnyaya Pyshma, Petrova 59a, +7 343 328-29-30.",
         autodrome:
           "Training track of CPPK branch. Classroom: Yekaterinburg, 8 Marta 158, office 207.",
       },

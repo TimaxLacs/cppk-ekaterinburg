@@ -25,7 +25,7 @@ export const people: {
 
 export const phones = {
   ekbBranch: "+7 (343) 257-57-92",
-  ekbAutodrome: "+7 (343) 257-57-92",
+  ekbAutodrome: "+7 (343) 328-29-30",
   ekbStudyMobile: "+7 (343) 257-57-92",
   ekbEmail: "ekb@cppkspb.ru",
   spbReception: "+7 (812) 297-57-36",

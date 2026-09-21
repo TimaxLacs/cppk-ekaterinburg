@@ -50,7 +50,8 @@ export default function MapsChannelPage() {
           <article className="rounded-3xl border border-line bg-white p-6">
             <p className="text-sm text-muted">Название везде</p>
             <h2 className="font-serif text-3xl">{mapFill.name}</h2>
-            <p className="mt-2 text-sm">{mapFill.phone}</p>
+            <p className="mt-2 text-sm">Кабинет: {mapFill.phone}</p>
+            <p className="mt-1 text-sm">Автодром: {mapFill.phoneAutodrome}</p>
             <p className="mt-1 text-sm">{mapFill.email}</p>
             <p className="mt-4 rounded-xl bg-bad-bg px-4 py-3 text-sm">
               Не «Учебный комбинат Допог». Это одна программа, не имя центра.
@@ -93,12 +94,15 @@ export default function MapsChannelPage() {
             <h3 className="font-serif text-2xl">Карточка автодрома</h3>
             <CopyField label="Адрес" value={mapFill.autodromeAddress} />
             <div className="mt-3">
+              <CopyField label="Телефон площадки" value={mapFill.phoneAutodrome} />
+            </div>
+            <div className="mt-3">
               <CopyField label="Часы" value="Пусто. Не заполнять." />
             </div>
             <div className="mt-3">
               <CopyField label="Координаты" value={mapFill.autodromeCoords} />
             </div>
-            <p className="mt-3 text-sm text-muted">Фото: въезд с Петрова, разметка, техника. Не чужой автодром и не 328 как наш телефон.</p>
+            <p className="mt-3 text-sm text-muted">Фото: въезд с Петрова, разметка, техника. Телефон площадки 328-29-30, его передали отдельно. На сайте филиала этой строки нет.</p>
           </article>
         </div>
       </Section>
