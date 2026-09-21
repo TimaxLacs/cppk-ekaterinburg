@@ -1,3 +1,5 @@
+/** Старый черновик. Не для публикации: там ещё 328, 922 и Ксения. Живые тексты в channels.ts и posts.ts. */
+
 export const ekbContentMix = [
   { label: "Справка и обучение", value: 40 },
   { label: "Люди и процесс", value: 20 },

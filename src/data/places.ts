@@ -16,19 +16,17 @@ export type Place = {
   note: string;
 };
 
-export const people = [
-  {
-    name: "Ксения Алексеевна",
-    role: "учебная часть филиала",
-    phone: "+7 (922) 207-83-69",
-    where: "Карточки карт и сообщения VK филиала. В публичное описание канала можно не дублировать, если хватает городского номера.",
-  },
-];
+export const people: {
+  name: string;
+  role: string;
+  phone: string;
+  where: string;
+}[] = [];
 
 export const phones = {
   ekbBranch: "+7 (343) 257-57-92",
-  ekbAutodrome: "+7 (343) 328-29-30",
-  ekbStudyMobile: "+7 (922) 207-83-69",
+  ekbAutodrome: "+7 (343) 257-57-92",
+  ekbStudyMobile: "+7 (343) 257-57-92",
   ekbEmail: "ekb@cppkspb.ru",
   spbReception: "+7 (812) 297-57-36",
   spbStudy1: "+7 (911) 928-14-78",
@@ -116,7 +114,7 @@ export const places: Place[] = [
     lat: 56.9542,
     lon: 60.618,
     phones: [phones.ekbAutodrome, phones.ekbStudyMobile],
-    hours: "По записи учебной части. Часы площадки уточняет Ксения Алексеевна. В агрегаторах встречается 06:00-00:00, в карточку не ставить без подтверждения.",
+    hours: "Часы площадки не публиковать. В агрегаторах встречается круглосуточно или 06:00-00:00, в карточку не ставить.",
     category: "Автодром / автошкола",
     mapName: "ЦППК, автодром",
     mapDescription:

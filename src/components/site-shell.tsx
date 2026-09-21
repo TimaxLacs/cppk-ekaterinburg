@@ -80,7 +80,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       {children}
       <footer className="border-t border-line">
         <div className="mx-auto max-w-7xl px-4 py-8 text-sm leading-6 text-muted sm:px-6">
-          Рабочий документ. Сверка cppkspb.ru, Яндекс и 2ГИС, 17.09.2026. Не
+          Рабочий документ. Сверка cppkspb.ru, Яндекс и 2ГИС, 21.09.2026. Не
           электрички АО «ЦППК».
         </div>
       </footer>
