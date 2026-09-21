@@ -37,10 +37,10 @@ export function CommunityChannelPage({ channel }: { channel: Channel }) {
           />
           <article className="rounded-3xl border border-line bg-white p-6">
             <div className="flex items-center gap-4">
-              <div className="h-16 w-16 overflow-hidden rounded-full border border-line">
+              <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-[#0c1b33]">
                 <OpenableImage
                   src={channel.avatar}
-                  alt="Аватар сообщества ЦППК Екатеринбург"
+                  alt="Знак ЦППК, аватар сообщества"
                   fill
                   hint={false}
                   className="h-16 w-16"

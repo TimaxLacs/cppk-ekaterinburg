@@ -28,7 +28,7 @@ export const channels: Channel[] = [
     goal: "Имя Межрегиональный ЦППК, телефон 343, цена базового ДОПОГ 4 500 ₽, без путаницы с пригородной компанией.",
     cadence: "Правка сниппета при смене факта. Не ежедневные объявления.",
     cover: "/brand/channels/cover-ekb-navy.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: false,
   },
   {
@@ -42,7 +42,7 @@ export const channels: Channel[] = [
     goal: "Два адреса, 343, ekb@, обед как на cppkspb.ru, без ekb.cppkspb.ru.",
     cadence: "После каждой сверки прайса и часов.",
     cover: "/brand/channels/cover-ekb-cream.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: false,
   },
   {
@@ -56,7 +56,7 @@ export const channels: Channel[] = [
     goal: "Имя Межрегиональный ЦППК, телефон только 343, часы автодрома пустые.",
     cadence: "Забрать карточки, затем отвечать на отзывы в часы кабинета.",
     cover: "/brand/channels/cover-ekb-gold.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: false,
   },
   {
@@ -70,7 +70,7 @@ export const channels: Channel[] = [
     goal: "4 500 ₽, экзамен на 8 Марта, 158, телефон 343.",
     cadence: "Объявление держать актуальным. Не поднимать пустым «права B».",
     cover: "/brand/channels/cover-cppk-ekb-16x9.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: false,
   },
   {
@@ -84,7 +84,7 @@ export const channels: Channel[] = [
     goal: "Клики на cppkspb.ru и звонок 343. Минус: автошкола, права B, электрички, ЦППК поезда.",
     cadence: "После сверки карт. Смотреть поиск запросов раз в две недели.",
     cover: "/brand/channels/cover-ekb-navy.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: false,
   },
   {
@@ -98,7 +98,7 @@ export const channels: Channel[] = [
     goal: "Верные шапка и закреп. Стена не про набор B.",
     cadence: "5 постов в неделю. Сторис в дни группы.",
     cover: "/brand/channels/cover-cppk-ekb-vk.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: true,
   },
   {
@@ -112,7 +112,7 @@ export const channels: Channel[] = [
     goal: "3-5 сообщений в неделю, не дубль каждой карточки ВК.",
     cadence: "Вторник-пятница, 9:30 или 18:30 по Екатеринбургу.",
     cover: "/brand/channels/cover-cppk-ekb-16x9.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-800.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: true,
   },
   {
@@ -126,7 +126,7 @@ export const channels: Channel[] = [
     goal: "Занять имя филиала, не смешать с Петербургом, не обещать бота до запуска.",
     cadence: "Первый месяц 5-7 постов в неделю, затем 4-5. Не больше двух в день.",
     cover: "/brand/channels/cover-ekb-navy.png",
-    avatar: "/brand/channels/avatar-cppk-ekb-512.png",
+    avatar: "/brand/logo/variants/signet-navy-gold.png",
     isCommunity: true,
   },
 ];

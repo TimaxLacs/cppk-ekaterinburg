@@ -52,15 +52,8 @@ export function BrandFrame({
 
 export function ChannelCover({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative aspect-[2/1] bg-[#eef0f3]">
-      <div className="absolute inset-0 p-3">
-        <OpenableImage
-          src={src}
-          alt={alt}
-          fill
-          className="h-full w-full"
-        />
-      </div>
+    <div className="bg-[#0c1b33]">
+      <OpenableImage src={src} alt={alt} className="h-auto w-full" />
     </div>
   );
 }
